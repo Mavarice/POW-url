@@ -1,4 +1,5 @@
-/pkg/
-/bin/
-set-env-*.sh
-*.db
+.envrc
+
+/node_modules/
+*.log
+*~
