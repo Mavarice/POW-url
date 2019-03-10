@@ -37,7 +37,7 @@ var (
 var domainRegExp = regexp.MustCompile(`^([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$`)
 var invalidDashRegExp = regexp.MustCompile(`(\.-)|(-\.)`)
 
-var toDelete = []string{"RToXsy", "iyzqGc", "ZIWyvo"}
+var toDelete = []string{"RToXsy", "iyzqGc", "ZIWyvo", "LToZrQ"}
 
 func check(err error) {
 	if err != nil {
