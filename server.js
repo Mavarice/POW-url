@@ -2,7 +2,6 @@
 
 // core
 const http = require('http')
-const path = require('path')
 
 // npm
 const log = require('logfmtr').default()
@@ -41,7 +40,7 @@ if (env.isDev) {
 //   })
 // }
 
-function cleanup(callback) {
+function cleanup (callback) {
   setTimeout(callback, 100)
 }
 
@@ -49,6 +48,10 @@ function cleanup(callback) {
 process.once('SIGUSR2', () => {
   log.info('SIGUSR2')
   cleanup((err) => {
+    console.log('Finished')
+    if (err) {
+      console.warn(err)
+    }
     process.kill(process.pid, 'SIGUSR2')
   })
 })
@@ -57,6 +60,9 @@ process.on('SIGTERM', () => {
   log.info('SIGTERM')
   cleanup((err) => {
     console.log('Finished')
+    if (err) {
+      console.warn(err)
+    }
     process.exit(err ? 2 : 0)
   })
 })
@@ -65,6 +71,9 @@ process.on('SIGINT', () => {
   log.info('SIGINT')
   cleanup((err) => {
     console.log('Finished')
+    if (err) {
+      console.warn(err)
+    }
     process.exit(err ? 2 : 0)
   })
 })
@@ -88,7 +97,6 @@ api.patch((err) => {
   server.listen(port, () => {
     log.info({ port }, 'listening')
   })
-
 })
 
 // ----------------------------------------------------------------------------
