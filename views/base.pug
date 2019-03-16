@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible",content="IE=edge")
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    meta(
+      name="description",
+      content=pkg.description)
+    meta(
+      name="keywords",
+      content="url, url shorten, url shortener, address shortner, url crusher, url minifier")
+    meta(name="author",content="Andrew Chilton, @andychilton")
+    link(rel="shortcut icon" href="/favicon.ico")
+
+    title= pkg.title
+
+    link(
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.7.2/tailwind.min.css"
+      integrity="sha256-krNldfVf0NG1kwbsehy7urGOekUmkcjTB+wAX+uidSI="
+      crossorigin="anonymous"
+    )
+    link(
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    )
+    link(
+      href="https://fonts.googleapis.com/css?family=Raleway:500|Source+Sans+Pro"
+      rel="stylesheet"
+    )
+    link(
+      href="/s/css/main.css"
+      rel="stylesheet"
+    )
+    style.
+      a { text-decoration: none; }
+      body { font-family: 'Source Sans Pro', sans-serif; }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Raleway', sans-serif;
+        margin: 1em 0;
+      }
+      p { margin-bottom: 1em; }
+
+    if env === 'production' && env.googleAnalytics
+      // Global site tag (gtag.js) - Google Analytics
+      script(async="" src=`https://www.googletagmanager.com/gtag/js?id=${env.googleAnalytics}`)
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '#{env.googleAnalytics}');
+
+  body
+
+    block layout
+
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"
+      integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc="
+      crossorigin="anonymous"
+    )
+    script(src="/s/js/main.js")

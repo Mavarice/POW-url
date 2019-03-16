@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .bg-grey-lighter.text-center.m-12.p-12.max-w-md.mx-auto
+    h1 Pow!
+    h2 Shorten your URLs
+    p This service is free to use.
+    form(action="/" method="post")
+      input.p-6.m-3.border.border-grey-dark.rounded(name="url" placeholder="https://...")
+      input.bg-blue-dark.text-white.p-6.m-3.rounded(type="submit" value="Shorten")
