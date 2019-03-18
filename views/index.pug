@@ -6,7 +6,12 @@ block content
     h2 Shorten your URLs
     p This service is free to use.
     form(action="/" method="post")
-      input.p-6.m-3.border.border-grey-dark.rounded(name="url" placeholder="https://..." value=form.url)
+      input.hidden(type="text" name="name" placeholder="Your Name" value="")
+      input.hidden(type="text" name="email" placeholder="Your Email" value="me@example.com")
+      input#location.hidden(type="text" name="location" placeholder="Location" value="")
+      input#url.p-6.m-3.border.border-grey-dark.rounded(type="text" name="url" placeholder="https://..." value=form.url)
       input.bg-blue-dark.text-white.p-6.m-3.rounded(type="submit" value="Shorten")
       if err
         p.text-red= err
+
+  script(src="/s/js/main.js")
