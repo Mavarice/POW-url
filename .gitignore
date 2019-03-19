@@ -1,4 +1,5 @@
 .envrc
+/deployer/ENV_*
 
 /node_modules/
 *.log

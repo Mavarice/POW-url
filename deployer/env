@@ -1,6 +1,6 @@
-NAKED_DOMAIN: pow.gd
+apex: pow.gd
+port: 60696
 PROTOCOL: https
-PORT: 60696
 HMAC_SECRET_KEY: ?
 DATABASE_URL: ?
 GOOGLE_ANALYTICS: ?
