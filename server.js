@@ -15,9 +15,6 @@ const api = require('./lib/api.js')
 // setup
 
 log.info('started')
-console.log('===============================================================================')
-console.log('env:', env)
-console.log('===============================================================================')
 
 if (env.isDev) {
   log.info(env, 'env')
