@@ -13,6 +13,7 @@ block content
         th.text-right View
         th.text-right Not Found
         th.text-right ✗ Blank URL
+        th.text-right ✗ Invalid URL
         th.text-right ✗ Name
         th.text-right ✗ Email
         th.text-right ✗ Location
@@ -29,6 +30,7 @@ block content
           td.text-right= stats[ts].view || 0
           td.text-right= stats[ts].notfound || 0
           td.text-right= stats[ts].blank || 0
+          td.text-right= stats[ts].invalid || 0
           td.text-right= stats[ts].name || 0
           td.text-right= stats[ts].email || 0
           td.text-right= stats[ts].location || 0
