@@ -44,7 +44,7 @@ html(lang="en")
       }
       p { margin-bottom: 1em; }
 
-    if env === 'production' && env.googleAnalytics
+    if env.googleAnalytics
       // Global site tag (gtag.js) - Google Analytics
       script(async="" src=`https://www.googletagmanager.com/gtag/js?id=${env.googleAnalytics}`)
       script.
