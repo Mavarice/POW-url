@@ -20,6 +20,7 @@ block content
         th.text-right ✗ TS Invalid
         th.text-right ✗ TS Old
         th.text-right ✗ Signature
+        th.text-right ✗ Banned Domain
     tbody
       for ts in Object.keys(stats).sort()
         tr
@@ -37,5 +38,6 @@ block content
           td.text-right= stats[ts].tsinvalid || 0
           td.text-right= stats[ts].tsold || 0
           td.text-right= stats[ts].sig || 0
+          td.text-right= stats[ts].banneddomain || 0
 
   p (Ends)
